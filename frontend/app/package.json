@@ -1,0 +1,42 @@
+{
+  "name": "~TODO~",
+  "version": "0.0.1",
+  "scripts": {
+    "dev:only": "svelte-kit dev",
+    "build:only": "svelte-kit build",
+    "preview": "svelte-kit preview",
+    "tailwind:watch": "cross-env TAILWIND_MODE=watch cross-env NODE_ENV=development postcss src/styles/tailwind.css -o src/styles/tailwind-output.css -w",
+    "tailwind:build": "cross-env TAILWIND_MODE=build cross-env NODE_ENV=production  postcss src/styles/tailwind.css -o src/styles/tailwind-output.css",
+    "dev": "concurrently \"yarn run dev:only\" \"yarn run tailwind:watch\"",
+    "build": "yarn run tailwind:build && yarn run build:only && yarn run injectManifest",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-node": "^1.0.0-next.43",
+    "@sveltejs/kit": "next",
+    "@tsconfig/svelte": "^2.0.1",
+    "@types/cookie": "^0.4.1",
+    "@types/d3": "^7.0.0",
+    "@types/d3-selection": "^3.0.0",
+    "@types/d3-shape": "^3.0.2",
+    "@types/js-cookie": "^2.2.7",
+    "autoprefixer": "^10.3.1",
+    "concurrently": "^6.2.0",
+    "cross-env": "^7.0.3",
+    "postcss-cli": "^8.3.1",
+    "svelte": "^3.34.0",
+    "svelte-check": "^2.0.0",
+    "svelte-preprocess": "^4.0.0",
+    "tailwindcss": "^2.2.7",
+    "tslib": "^2.3.0",
+    "typescript": "^4.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "cookie": "^0.4.1",
+    "d3-selection": "^3.0.0",
+    "d3-shape": "^3.0.1",
+    "js-cookie": "^3.0.0"
+  }
+}
