@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = ""
+authors = ["roci <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.68.0"
+uvicorn = "^0.14.0"
+SQLAlchemy = {version = "*", extras = ["mypy"]}
+attrs = "^21.2.0"
+email-validator = "^1.1.3"
+PyJWT = "^2.1.0"
+
+[tool.poetry.dev-dependencies]
+sqlalchemy-stubs = "^0.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
