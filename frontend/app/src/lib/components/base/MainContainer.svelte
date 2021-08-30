@@ -1,21 +1,6 @@
-<script lang="ts">
 
-  export let offset: number = 0;
-</script>
-
-
-<div class="main-container h-screen flex justify-center items-center bg-gray-100" style={`width: calc(100% - ${offset}px)`}>
+<div class="main-container flex flex-1 bg-theme-light-primary">
   <slot/>
 </div>
-
-
-  <style>
-  .main-container{
-    transition-property: width;
-    transition-timing-function: ease-in;
-    transition-duration: 200ms;
-  }
-
-  </style>
 
 

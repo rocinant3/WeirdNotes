@@ -6,7 +6,7 @@ type RouteType = {
 }
 
 export const routes: RouteType[] = [
-  {title: 'home', href: '/', isPublic: false},
+  {title: 'home', href: '/', isPublic: true},
   {title: 'lk', href: '/account', isPublic: false},
   {title: 'sign-in', href: '/auth/sign-in', isPublic: true},
   {title: 'sign-up', href: '/auth/sign-up', isPublic: true},

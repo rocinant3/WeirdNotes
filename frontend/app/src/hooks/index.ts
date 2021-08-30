@@ -18,7 +18,6 @@ export async function handle({ request, resolve }) {
   request.locals.isLoggedIn = isLoggedIn;
   const response = await resolve(request);
 
-  console.log('Hook!')
   const publicPaths = routes.filter((r) => r.isPublic).map((r) => r.href)
 
   if (!isLoggedIn && !publicPaths.includes(request.path)) {
